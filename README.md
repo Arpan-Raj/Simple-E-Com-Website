@@ -44,7 +44,7 @@ select Windows and follow the instruction to download Vscode
 
 1.Clone the repository to your local machine:
 
-    git clone https://github.com/yourusername/funky-ecommerce.git
+    git clone https://github.com/Arpan-Raj/funky-ecommerce.git
 
 2.Install dependencies:
 
