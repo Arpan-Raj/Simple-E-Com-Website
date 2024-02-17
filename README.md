@@ -59,8 +59,11 @@ Open Compass > select connect > create database name it myapp > create collectio
 
 ### Usage
 -Visit http://localhost:5000 in your web browser to access the website.
+
 -As an admin, you can add, edit, and delete products by visiting the admin panel.
+
 -Users can browse products, add them to the cart, and proceed to checkout.
+
 -Ensure MongoDB is running locally or provide a MongoDB URI for database connectivity.
 
 Contributing
