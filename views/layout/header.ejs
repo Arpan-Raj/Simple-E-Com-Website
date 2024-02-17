@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title  %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .white-text{
+            color: white;
+        }
+        .hover-text:hover{
+            transition: .5s;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:green;">
+        <div class="container hover-text">
+            <a href="/" class="navbar-brand white-text"><i class="white-text fas fa-music me-2"></i>THE FUNK LOVER</a>
+            <button class="navbar-toggler" data-bs-target="#my-nav" data-bs-toggle="collapse" arial-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="my-nav" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a href="/" class="nav-link white-text"><i class="white-text fas fa-home me-1"></i>Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="/cartpage" class="nav-link white-text"><i class="white-text fas fa-shopping-cart me-1"></i>View Cart</a>
+                    </li>
+                    <!-- <li class="nav-item active">
+                        <a href="/add" class="nav-link"><i class="fas fa-user me-1"></i>Admin</a>
+                    </li> -->
+                    <div class="dropdown nav-item active ">
+                        <button class="white-text btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="funPopUp(this)">
+                            <i class="white-text fas fa-user me-1 "></i>Admin Panel
+                        </button>
+                        <ul class="dropdown-menu m-1">
+                          <li><a class="dropdown-item " href="/add">Add</a></li>
+                          <li><a class="dropdown-item " href="/delete">Delete</a></li>
+                        </ul>
+                      </div>
+                      <!-- btn-dark text-secondary text-secondary -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script>
+        function funPopUp(e){
+        let popUpDisplay = e.parentElement.children[1];
+        
+        
+        if(popUpDisplay.style.display == "none"){
+            popUpDisplay.style.display = "flex";
+            popUpDisplay.style.flexDirection = "column";
+        }
+        else{
+            popUpDisplay.style.display = "none";
+        }
+        // console.log(e.parentElement.children[1].style.display="flex");
+        console.log(e.parentElement.children[1])
+    }
+    </script>

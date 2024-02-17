@@ -1,0 +1,74 @@
+    <%- include('layout/header') %>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 2px;
+            row-gap: 60px;
+            margin-top: 8vh;
+            margin-bottom: 14vh;
+        }
+        .grid-item {
+        
+        background-color: rgba(255, 255, 255, 0.8);
+        border: none;
+        padding: 20px;
+        text-align: center;
+        }
+        .item-btn{
+            
+            height: 5vh;
+            width: 14.4vw;
+            border: 1px solid gray;
+            background-color: white;
+            color: black;
+        }
+        .item-btn:hover{
+            transition: .5s;
+            background-color: green;
+            color: white;
+        }
+        .item-btn a{
+            color: black;
+            text-decoration: none;
+        }
+        .item-btn a:hover{
+            color: rgb(255, 255, 255);
+        }
+    </style>
+    <div class="container">
+        <div class="row my-4">
+            <div class="col-lg-12">
+                <% if (message) { %>
+                <div class="alert alert-dismissible fade show alert-<%= message.type %>" role="alert">
+                <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+                <strong><%= message.message %></strong>
+                </div>
+                <% } %>
+                <div class="table-reponsive">
+                    <% if (homeuser != '') { %>
+                        <div class="grid-container">
+                                <% homeuser.forEach((row,index) => { %>
+                                    <div class="grid-item">
+                                        <div><img src="<%= row.image %>" width="200px" class="img.thumbnail"></div>
+                                        <div>
+                                            <button class="item-btn">
+                                                <a href="/addtocart/<%= row._id %>" >Add To Cart</a>
+                                                <!-- <i class="fas fa-shopping-cart fa-lg mx-1"></i> -->
+                                            </button>
+                                        </div>
+                                        <div><%= row.name %></div>
+                                        <div><%= row.price %></div>
+                                    </div>
+                                <% }) %>
+                        </div>
+                    <% } else { %>
+                        <h1 class="text-center text-secondary mt-5">Your cart is empty</h1>
+                    <% } %>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('layout/footer') %>
