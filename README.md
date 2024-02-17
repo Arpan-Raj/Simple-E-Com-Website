@@ -17,16 +17,28 @@ Multer: Middleware for handling multipart/form-data, used for file uploads.
 EJS: Embedded JavaScript templating for generating HTML with plain JavaScript.
 Bootstrap: Front-end framework for designing responsive and mobile-first websites.
 
+
 ### Prerequisites
 1.Node install:- https://nodejs.org/en/download
+
 select Windows Installer.msi and follow the instruction to download node
 
 2.Mongodb install:- https://www.mongodb.com/try/download/community
+
 select Windows x64 in platform
+
 select msi in packages and follow the instruction to download Mongodb
 
 3.Vscode install:- https://code.visualstudio.com/download
+
 select Windows and follow the instruction to download Vscode
+
+4.Install Github Desktop and GIT for Windows 
+- git https://git-scm.com/download/win
+- github-desktop https://desktop.github.com/
+
+### Remember after prerequisite installation restart your computer!
+
 
 ### Installation
 
@@ -45,10 +57,11 @@ select Windows and follow the instruction to download Vscode
   
    - Add the following environment variables:
 
-         PORT=5000
+    PORT=5000
 
-         DB_URI=mongodb://127.0.0.1:27017/myapp
+    DB_URI=mongodb://127.0.0.1:27017/myapp
 
+-create a uploads folder
 
 4.Set Database in MongoDB Compass
 Open Compass > select connect > create database name it myapp > create collection products
