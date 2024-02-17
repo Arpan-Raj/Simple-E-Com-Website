@@ -61,7 +61,7 @@ select Windows and follow the instruction to download Vscode
 
     DB_URI=mongodb://127.0.0.1:27017/myapp
 
--create a uploads folder
+- create an uploads folder in root directory
 
 4.Set Database in MongoDB Compass
 Open Compass > select connect > create database name it myapp > create collection products
